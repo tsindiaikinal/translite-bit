@@ -1,0 +1,359 @@
+/* START STYLE OF FORM */
+.transfer
+{
+    position: absolute;
+    z-index: 30;
+    top: 25%;
+    left: 5em;
+    overflow: hidden;
+    width: 18.5em;
+    height: 25.625em;
+    margin: -12.8125em 0 0;
+    -webkit-transition:         transform .5s cubic-bezier(.77, 0, .175, 1);
+       -moz-transition:         transform .5s cubic-bezier(.77, 0, .175, 1);
+        -ms-transition:         transform .5s cubic-bezier(.77, 0, .175, 1);
+         -o-transition:         transform .5s cubic-bezier(.77, 0, .175, 1);
+            transition: -webkit-transform .5s cubic-bezier(.77, 0, .175, 1);
+            transition:         transform .5s cubic-bezier(.77, 0, .175, 1);
+    -webkit-transform: .5s cubic-bezier(.77, 0, .175, 1);
+            transform: .5s cubic-bezier(.77, 0, .175, 1);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .1), 0 10px 30px 0 rgba(0, 0, 0, .2);
+}
+
+.transfer__contents
+{
+    font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    height: 21.125em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.transfer__uploader-files
+{
+    display: flex;
+    height: 155px;
+    padding-left: 7%;
+    border-bottom: 1px solid #d4d7d9;
+    align-items: center;
+}
+
+.transfer__head
+{
+    font-size: 1.3rem;
+    font-weight: 400;
+     color: #000;
+    display: inline-block;
+    width: 80%;
+}
+
+#add-btn
+{
+    font-weight: bold;
+    display: none;
+    overflow: hidden;
+    color: blue;
+    border: none;
+    background: none;
+}
+
+.add-btn
+{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 13px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #409fff;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+}
+.add-btn:hover
+{
+    cursor: pointer;
+    background-color: #0073e5;
+}
+
+.add-btn
+{
+    font-size: 1rem;
+    line-height: 35px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    text-align: center;
+
+    color: #fff;
+}
+
+.email-field,
+.textarea
+{
+    width: 100%;
+}
+
+.email-field__field,
+.textarea__field
+{
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    padding-top: 10%;
+    padding-left: 3%;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #d4d7d9;
+    border-left: none;
+    outline: none;
+}
+
+.textarea__field
+{
+    resize: none;
+    border-bottom: none;
+}
+
+.email-field:focus-within .email-field__label,
+.textarea:focus-within .textarea__label
+{
+    font-size: .7rem;
+    margin-top: .5em;
+}
+
+.email-field__label,
+.textarea__label
+{
+    font-size: .875em;
+    position: absolute;
+    left: 7%;
+    margin-top: 1.07143em;
+    -webkit-transition: margin-top .3s;
+       -moz-transition: margin-top .3s;
+        -ms-transition: margin-top .3s;
+         -o-transition: margin-top .3s;
+            transition: margin-top .3s;
+
+    color: #6a6d70;
+}
+
+.transfer__footer
+{
+    position: relative;
+    height: 4.5em;
+    padding: 0 1.25em;
+    border-top: 1px solid #d4d7d9;
+}
+
+.transfer__button
+{
+    font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande',
+    sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 9.75em;
+    height: 2.5em;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: border-color .2s cubic-bezier(.77, 0, .175, 1),
+    background-color .2s cubic-bezier(.77, 0, .175, 1),
+    color .2s cubic-bezier(.77, 0, .175, 1);
+            transition: border-color .2s cubic-bezier(.77, 0, .175, 1),
+    background-color .2s cubic-bezier(.77, 0, .175, 1),
+    color .2s cubic-bezier(.77, 0, .175, 1);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #fff;
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    outline: 0;
+    background: #409fff;
+}
+
+.transfer__button:hover,
+.transfer__button:focus
+{
+    border-color: #0073e5;
+    background-color: #0073e5;
+}
+
+.transfer__button--inactive
+{
+    cursor: default;
+    color: #fff;
+    border-color: #babcbf;
+    background: #babcbf;
+}
+.transfer__button--inactive:hover,
+.transfer__button--inactive:focus
+{
+    cursor: default;
+    color: #fff;
+    border-color: #babcbf;
+    background: #babcbf;
+}
+
+.transfer__toggle-options
+{
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border: 0;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    outline: 0;
+    background: transparent;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+}
+.transfer__toggle-options:hover
+{
+    border: 1px solid #0073e5;
+}
+
+.scroll-menu
+{
+    position: absolute;
+    top: -284px;
+    left: -105%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 280px;
+    -webkit-transition: left 1s ease .5s;
+       -moz-transition: left 1s ease .5s;
+        -ms-transition: left 1s ease .5s;
+         -o-transition: left 1s ease .5s;
+            transition: left 1s ease .5s;
+
+    background-color: #fff;
+}
+.scroll-menu__form-1,
+.scroll-menu__form-2
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    padding-top: 15px;
+    border-top: 1px solid #d4d7d9;
+    justify-content: space-around;
+}
+
+.scroll-menu__head
+{
+    font-family: sans-serif;
+    font-size: .825rem;
+    font-weight: lighter;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.poptip:hover .scroll-menu
+{
+    left: 0;
+}
+
+.scroll-menu__field
+{
+    display: none;
+}
+
+.scroll-menu__label
+{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    padding-left: 2px;
+    cursor: pointer;
+    border: 1px solid #babcbf;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+}
+.active::before
+{
+    font-family: 'Font Awesome 5 Free';
+    font-size: .8rem;
+    font-weight: 600;
+    display: inline-block;
+    content: '\f00c';
+    color: green;
+}
+
+.scroll-menu__title
+{
+    font-family: sans-serif;
+    font-size: .7rem;
+    position: absolute;
+    width: 70px;
+    margin-top: 25px;
+}
+
+.scroll-menu__form-1 span:nth-of-type(1)
+{
+    margin-left: -20%;
+}
+.scroll-menu__form-1 span:nth-of-type(2)
+{
+    margin-left: 32%;
+}
+.scroll-menu__form-2 span:nth-of-type(1)
+{
+    margin-left: -25%;
+}
+.scroll-menu__form-2 span:nth-of-type(2)
+{
+    margin-left: 7%;
+}
+.scroll-menu__form-2 span:nth-of-type(3)
+{
+    margin-left: 40%;
+}
+.report
+{
+    font-family: sans-serif;
+    font-size: .8rem;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+    display: none;
+    overflow: hidden;
+    width: 200px;
+    height: 220px;
+    padding: 5px;
+    text-align: center;
+}
+/* END STYLE OF FORM */
